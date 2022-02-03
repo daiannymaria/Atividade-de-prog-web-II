@@ -1,15 +1,15 @@
 <html>
     <head>
-       <center> <title> LISTANDO CIDADES </title> </center>
+        <title> DDD </title>
     </head>
+
     <body>
-        <input type="text" placeholder="insira cidades" id="insira cidades" size="5"> 
+        <input type="text" placeholder="DDD" id="DDD" size="3"> 
         <ul></ul>
-
         <script>
-            document.querySelector("#insira cidades").addEventListener("change",buscaCity)
+            document.querySelector("#DDD").addEventListener("change",buscaCidades)
 
-            function buscaCity(evento){
+            function buscaCidades(evento){
                 fetch(`https://brasilapi.com.br/api/ddd/v1/${evento.target.value}`)
                 .then(resposta => resposta.json())
                 .then(dados => {
@@ -17,7 +17,7 @@
                 });
             }
 
-            function listandoCity(cidades){
+            function listaCidades(cidades){
                 const tamanho = cidades.length;
                 const lista = document.querySelector("ul");
                 lista.innerHTML = "<ul></ul>";
@@ -28,5 +28,5 @@
                 }
             }
         </script>
-        </body>
+    </body>
 </html> 
