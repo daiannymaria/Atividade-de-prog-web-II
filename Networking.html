@@ -7,7 +7,7 @@
         <input type="text" placeholder="insira o DDD" id="insira o DDD" size="7"> 
         <ul></ul>
         <script>
-            document.querySelector("#DDD").addEventListener("change",buscaCidades)
+            document.querySelector("#insira o DDD").addEventListener("change",buscaCidades)
 
             function buscaCidades(evento){
                 fetch(`https://brasilapi.com.br/api/ddd/v1/${evento.target.value}`)
@@ -30,5 +30,5 @@
         </script>
     </body>
 </html> 
-
+      
    
