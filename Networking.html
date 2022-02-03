@@ -9,21 +9,21 @@
 
        <h3> escreva seu DDD aqui: </h3>
 
-        <input type="text" placeholder="insira seu DDD" id="DDD" size="10"> 
+        <input type="text" placeholder="insira seu DDD" id="DDD" size="8"> 
         <ul></ul>
 
         <script>
-            document.querySelector("#DDD").addEventListener("change",buscaCidades)
+            document.querySelector("#DDD").addEventListener("change",buscaCity)
 
-            function buscaCidades(evento){
+            function buscaCity(evento){
                 fetch(`https://brasilapi.com.br/api/ddd/v1/${evento.target.value}`)
                 .then(resposta => resposta.json())
                 .then(dados => {
-                    listaCidades(dados.cities)
+                    listandoCity(dados.cities)
                 });
             }
 
-            function listaCidades(cidades){
+            function listandoCity(cidades){
                 const tamanho = cidades.length;
                 const lista = document.querySelector("ul");
                 lista.innerHTML = "<ul></ul>";
