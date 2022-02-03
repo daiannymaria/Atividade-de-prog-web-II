@@ -1,28 +1,23 @@
 <html>
     <head>
-        <title> Listando Cidades </title>
+        <title> DDD </title>
     </head>
 
     <body>
-
-             <center> <h1> CIDADES COM O DDD DO SEU ESTADO </h1> </center>
-              <h3> Insira abaixo o seu DDD: </h3>
-             
-        <input type="text" placeholder="insira o DDD" id="insira o DDD" size="7"> 
+        <input type="text" placeholder="DDD" id="DDD" size="3"> 
         <ul></ul>
         <script>
-            document.querySelector("#insira o DDD").addEventListener("change",buscaCity)
+            document.querySelector("#DDD").addEventListener("change",buscaCidades)
 
-
-            function buscaCity(evento){
+            function buscaCidades(evento){
                 fetch(`https://brasilapi.com.br/api/ddd/v1/${evento.target.value}`)
                 .then(resposta => resposta.json())
                 .then(dados => {
-                    listandoCity(dados.cities)
+                    listaCidades(dados.cities)
                 });
             }
 
-            function listandoCity(cidades){
+            function listaCidades(cidades){
                 const tamanho = cidades.length;
                 const lista = document.querySelector("ul");
                 lista.innerHTML = "<ul></ul>";
