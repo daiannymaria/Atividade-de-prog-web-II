@@ -4,11 +4,11 @@
     </head>
 
     <body>
-        <input type="text" placeholder="INSIRA SEU DDD" id="INSIRA SEU DDD" size="7"> 
+        <input type="text" placeholder="DDD" id="DDD" size="7"> 
         <ul></ul>
 
         <script>
-            document.querySelector("#INSIRA SEU DDD").addEventListener("change",buscaCidades)
+            document.querySelector("#DDD").addEventListener("change",buscaCidades)
 
             function buscaCidades(evento){
                 fetch(`https://brasilapi.com.br/api/ddd/v1/${evento.target.value}`)
