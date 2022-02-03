@@ -1,0 +1,36 @@
+<html>
+    <head> 
+   <h1> <title> Listando cidades com um determinado DDD </title> </h1>
+    </head>
+    <body>
+       <input type="text" placeholder="cityddd" id="cityddd" size="3"> 
+        <ul></ul>
+    <script>
+       document.querySelector("#cityddd").addEventListener("change",procuracity)
+       
+        }
+
+            function listandocity(cidades)
+            {
+           
+                const tamanho = cidades.length;
+                const lista = document.querySelector("ul");
+                lista.innerHTML = "<ul></ul>";
+                for(let i = 0; i < tamanho; i++)
+                {
+                    item = document.createElement("li");
+                    item.textContent = cidades[i];
+                    lista.append(item);
+                }
+            }
+       
+       function procuracity(evento){
+                fetch(`https://brasilapi.com.br/api/ddd/v1/${evento.target.value}`)
+                .then(resposta => resposta.json())
+                .then(dados => {
+                    listandocity(dados.cities)
+                });
+                
+     </script>           
+    </body>
+    </html>
