@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", daday)
 let tamanho = 2;
 
-        function daday(){
+        function dada(){
 			div = document.createElement("div");
 			div.style.fontSize = `${tamanho}em`;
 			div.innerHTML = `<button onclick="maior()">+</button>
