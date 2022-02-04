@@ -1,7 +1,7 @@
-document.addEventListener("DOMContentLoaded", inserir)
+document.addEventListener("DOMContentLoaded", daday)
 let tamanho = 2;
 
-        function inserir(){
+        function daday(){
 			div = document.createElement("div");
 			div.style.fontSize = `${controle}em`;
 			div.innerHTML = `<button onclick="maior()">+</button>
