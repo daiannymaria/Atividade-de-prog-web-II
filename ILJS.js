@@ -1,23 +1,23 @@
-const subtitulos = document.querySelectorAll("h2");
-const topicos = new Array();
-subtitulos.forEach(element => {
-	topicos.push(element.textContent);
+const d01 = document.querySelectorAll("h2");
+const d02 = new Array();
+d01.forEach(element => {
+	d02.push(element.textContent);
 	
-	const ancora = document.createElement("a");
-	ancora.setAttribute("name", element.textContent);
-	element.append(ancora);
+	const d03 = document.createElement("a");
+	d03.setAttribute("name", element.textContent);
+	element.append(d03);
 	
-	const retorno = document.createElement("a");
-	retorno.setAttribute("href", "#");
-	retorno.textContent = "início";
-	element.parentElement.insertBefore(retorno, element.nextElementSibling);
+	const d04 = document.createElement("a");
+	d04.setAttribute("href", "#");
+	d04.textContent = "início";
+	element.parentElement.insertBefore(d04, element.nextElementSibling);
 });
 
-const lista = document.querySelector("ol");
+const list = document.querySelector("ol");
 topicos.forEach(topico => {
 	const item = document.createElement("li");
 	const link = document.createElement("a");
-	lista.append(item);
+	list.append(item);
 	item.append(link);
 	link.setAttribute("href", `#${topico}`);
 	link.textContent = topico;
