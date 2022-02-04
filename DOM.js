@@ -1,4 +1,3 @@
-<script src="DOM.html"> 
 document.addEventListener("DOMContentLoaded", inserir)
 let tamanho = 2;
 
@@ -27,5 +26,3 @@ let tamanho = 2;
                 atualização();
             }
         }
-
-</script>
