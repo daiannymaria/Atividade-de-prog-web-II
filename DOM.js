@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", daday)
-let tamanho = 2;
+let mediano = 2;
 
         function daday(){
 			div = document.createElement("div");
