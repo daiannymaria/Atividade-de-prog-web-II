@@ -15,14 +15,14 @@ let tamanho = 2;
             h1.style.fontSize = `${tamanho}em`;
         }
         function maior() {
-			if (tamanho < 10) {
-				tamanho += 0.10;
+			if (tamanho < 6) {
+				tamanho += 0.6;
 				maria();
 			}
         }
         function menor() {
-            if (tamanho > 0.10) {
-                tamanho -= 0.10;
+            if (tamanho > 0.6) {
+                tamanho -= 0.6;
                 maria();
             }
         }
