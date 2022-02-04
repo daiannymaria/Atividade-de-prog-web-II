@@ -1,4 +1,4 @@
-<script src="DOM.js"> 
+<script src="DOM.html"> 
 document.addEventListener("DOMContentLoaded", inserir)
 let tamanho = 2;
 
