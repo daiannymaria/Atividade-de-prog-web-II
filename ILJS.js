@@ -14,7 +14,7 @@ d01.forEach(element => {
 });
 
 const list = document.querySelector("ol");
-topicos.forEach(topico => {
+topico.forEach(topico => {
 	const item = document.createElement("li");
 	const link = document.createElement("a");
 	list.append(item);
