@@ -1,30 +1,28 @@
-document.addEventListener("DOMContentLoaded", daday)
-let mediano = 2;
+document.addEventListener("DOMContentLoaded", inserir)
+let tamanho = 2;
 
-        function daday(){
+        function inserir(){
 			div = document.createElement("div");
-			div.style.fontSize = `${controle}em`;
-			div.innerHTML = `<button onclick="maior()">+</button>
-            <button onclick="menor()">-</button>
+			div.style.fontSize = `${tamanho}em`;
+			div.innerHTML = `<button onclick="aumentar()">+</button>
+            <button onclick="diminuir()">-</button>
 			`;
 			document.body.prepend(div)
 		}
+
+        function atualização() {
+            const h1 = document.querySelector("h1");
+            h1.style.fontSize = `${tamanho}em`;
         }
-        function menor() {
-            if (controle > 0.7) {
-                controle -= 0.7;
-                mediano();
+        function aumentar() {
+			if (tamanho < 5) {
+				tamanho += 0.5;
+				atualização();
+			}
+        }
+        function diminuir() {
+            if (tamanho > 0.5) {
+                tamanho -= 0.5;
+                atualização();
             }
         }
-
-        function mediano() {
-            const h1 = document.querySelector("h1");
-            h1.style.fontSize = `${controle}em`;
-        }
-
-        function maior() {
-			if (controle < 7) {
-				controle += 0.7;
-				mediano();
-			}
-
