@@ -10,19 +10,19 @@ let tamanho = 2;
 			document.body.prepend(div)
 		}
 
-        function atualização() {
+        function maria() {
             const h1 = document.querySelector("h1");
             h1.style.fontSize = `${tamanho}em`;
         }
         function maior() {
-			if (tamanho < 7) {
-				tamanho += 0.7;
-				atualização();
+			if (tamanho < 10) {
+				tamanho += 0.10;
+				maria();
 			}
         }
         function menor() {
-            if (tamanho > 0.7) {
-                tamanho -= 0.7;
-                atualização();
+            if (tamanho > 0.10) {
+                tamanho -= 0.10;
+                maria();
             }
         }
