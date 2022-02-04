@@ -1,11 +1,11 @@
-document.addEventListener("DOMContentLoaded", inserir)
+document.addEventListener("DOMContentLoaded", daday)
 let tamanho = 2;
 
-        function inserir(){
+        function daday(){
 			div = document.createElement("div");
 			div.style.fontSize = `${tamanho}em`;
-			div.innerHTML = `<button onclick="aumentar()">+</button>
-            <button onclick="diminuir()">-</button>
+			div.innerHTML = `<button onclick="maior()">+</button>
+            <button onclick="menor()">-</button>
 			`;
 			document.body.prepend(div)
 		}
@@ -14,15 +14,15 @@ let tamanho = 2;
             const h1 = document.querySelector("h1");
             h1.style.fontSize = `${tamanho}em`;
         }
-        function aumentar() {
-			if (tamanho < 5) {
-				tamanho += 0.5;
+        function maior() {
+			if (tamanho < 7) {
+				tamanho += 0.7;
 				atualização();
 			}
         }
-        function diminuir() {
-            if (tamanho > 0.5) {
-                tamanho -= 0.5;
+        function menor() {
+            if (tamanho > 0.7) {
+                tamanho -= 0.7;
                 atualização();
             }
         }
