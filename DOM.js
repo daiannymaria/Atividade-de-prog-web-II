@@ -11,8 +11,8 @@ let tamanho = 2;
 		}
         }
         function menor() {
-            if (controle > 0.5) {
-                controle -= 0.5;
+            if (controle > 0.7) {
+                controle -= 0.7;
                 mediano();
             }
         }
@@ -23,8 +23,8 @@ let tamanho = 2;
         }
 
         function maior() {
-			if (controle < 5) {
-				controle += 0.5;
+			if (controle < 7) {
+				controle += 0.7;
 				mediano();
 			}
 
